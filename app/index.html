@@ -1,137 +1,139 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leonida Nights — GTA VI Trophy Guide &amp; Tracker</title>
-<meta name="description" content="Offline trophy guide, Road to Platinum roadmap, missables tracker and progress tracker for all 55 Grand Theft Auto VI PlayStation trophies.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<a class="skip" href="#list-heading">Skip to trophy list</a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leonida Nights — GTA VI Trophy Guide &amp; Tracker</title>
+    <meta name="description" content="Offline trophy guide, Road to Platinum roadmap, missables tracker and progress tracker for all 55 Grand Theft Auto VI PlayStation trophies.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip" href="#list-heading">Skip to trophy list</a>
 
-<header class="dash">
-  <div class="dash-top">
-    <div class="brand">
-      <div class="brand-mark" aria-hidden="true">LN</div>
-      <div>
-        <h1>Leonida Nights</h1>
-        <p class="tagline">GTA VI Trophy Guide &amp; Tracker — all 55 PlayStation trophies, fully offline</p>
-      </div>
-    </div>
-    <div class="dash-actions">
-      <button id="export-btn" type="button">Export progress</button>
-      <label class="file-btn">Import progress<input id="import-input" type="file" accept="application/json"></label>
-      <button id="reset-btn" type="button" class="ghost">Reset</button>
-    </div>
-  </div>
-
-  <div class="dash-stats" role="region" aria-label="Overall progress">
-    <div class="big-stat">
-      <span id="overall-pct" class="big-num">0%</span>
-      <span id="overall-count" class="big-sub">0 of 55 earned</span>
-      <span id="overall-points" class="big-sub">0 trophy points</span>
-    </div>
-    <div class="bar big-bar" aria-hidden="true"><div id="overall-bar" class="bar-fill"></div></div>
-    <div id="grade-stats" class="grade-stats"></div>
-  </div>
-
-  <nav class="tabs" aria-label="Views">
-    <button type="button" class="tab is-active" data-view="guide" aria-pressed="true">Guide &amp; Tracker</button>
-    <button type="button" class="tab" data-view="roadmap" aria-pressed="false">Road to Platinum</button>
-    <button type="button" class="tab" data-view="missables" aria-pressed="false">Missables <span id="missable-badge" class="badge"></span></button>
-  </nav>
-</header>
-
-<main>
-  <!-- ============ GUIDE VIEW ============ -->
-  <section id="view-guide" class="view">
-    <div class="controls" role="region" aria-label="Filters">
-      <label class="ctl grow">Search
-        <input id="f-search" type="search" placeholder="Search name or description…" autocomplete="off">
-      </label>
-      <label class="ctl">Grade
-        <select id="f-grade">
-          <option value="all">All grades</option>
-          <option value="platinum">Platinum</option>
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="bronze">Bronze</option>
-        </select>
-      </label>
-      <label class="ctl">Type
-        <select id="f-kind">
-          <option value="all">All types</option>
-        </select>
-      </label>
-      <label class="ctl">Status
-        <select id="f-status">
-          <option value="all">Earned + unearned</option>
-          <option value="earned">Earned only</option>
-          <option value="unearned">Unearned only</option>
-        </select>
-      </label>
-      <label class="ctl">Missable
-        <select id="f-missable">
-          <option value="all">All</option>
-          <option value="yes">Missable only</option>
-          <option value="no">Not missable</option>
-        </select>
-      </label>
-      <label class="ctl">Hidden
-        <select id="f-hidden">
-          <option value="all">All</option>
-          <option value="yes">Hidden only</option>
-          <option value="no">Visible only</option>
-        </select>
-      </label>
-      <label class="ctl check">
-        <input id="f-spoiler" type="checkbox" checked>
-        <span>Spoiler protection<br><small>Blur hidden &amp; story trophies until earned</small></span>
-      </label>
-    </div>
-
-    <p id="result-count" class="result-count" role="status"></p>
-
-    <div class="layout">
-      <div class="list-wrap">
-        <h2 id="list-heading" class="sr-only">Trophy list</h2>
-        <ul id="list" class="cards"></ul>
-        <p id="empty" class="empty" hidden>No trophies match these filters. Loosen a filter or clear the search.</p>
+    <header class="dash">
+      <div class="dash-top">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">LN</div>
+          <div>
+            <h1>Leonida Nights</h1>
+            <p class="tagline">GTA VI Trophy Guide &amp; Tracker — all 55 PlayStation trophies, fully offline</p>
+          </div>
+        </div>
+        <div class="dash-actions">
+          <button id="export-btn" type="button">Export progress</button>
+          <label class="file-btn">Import progress<input id="import-input" type="file" accept="application/json"></label>
+          <button id="reset-btn" type="button" class="ghost">Reset</button>
+        </div>
       </div>
 
-      <aside id="detail" class="detail" aria-label="Trophy detail" aria-live="polite">
-        <p class="detail-hint">Select a trophy to read its full guide — official description, strategy, missable window, tips and sources.</p>
-      </aside>
-    </div>
-  </section>
+      <div class="dash-stats" role="region" aria-label="Overall progress">
+        <div class="big-stat">
+          <span id="overall-pct" class="big-num">0%</span>
+          <span id="overall-count" class="big-sub">0 of 55 earned</span>
+          <span id="overall-points" class="big-sub">0 trophy points</span>
+        </div>
+        <div class="bar big-bar" aria-hidden="true">
+          <div id="overall-bar" class="bar-fill"></div>
+        </div>
+        <div id="grade-stats" class="grade-stats"></div>
+      </div>
 
-  <!-- ============ ROADMAP VIEW ============ -->
-  <section id="view-roadmap" class="view" hidden>
-    <div class="view-head">
-      <h2>Road to Platinum</h2>
-      <p>Five phases, ordered from the official trophy descriptions. Story first (with missable warnings in mission order), then strands and the finale, then the open-world sweep, then crime, combat and money, and finally cleanup to 100%. Estimated total: <strong>60–100 hours</strong>, dominated by 100% completion and the big counters (250 stunts, 500 choices, $250,000 laundered). No difficulty trophy exists in the official list, and nothing in the list requires online play — every trophy is a single-player activity.</p>
-      <p class="ponr">⚠ Point of no return: before starting the final mission, clear every open stranger strand and attempt the VCIA departure trophy. The finale is the last guaranteed story window.</p>
-      <button type="button" class="print-btn" onclick="window.print()">Print this roadmap</button>
-    </div>
-    <div id="roadmap"></div>
-  </section>
+      <nav class="tabs" aria-label="Views">
+        <button type="button" class="tab is-active" data-view="guide" aria-pressed="true">Guide &amp; Tracker</button>
+        <button type="button" class="tab" data-view="roadmap" aria-pressed="false">Road to Platinum</button>
+        <button type="button" class="tab" data-view="missables" aria-pressed="false">Missables <span id="missable-badge" class="badge"></span></button>
+      </nav>
+    </header>
 
-  <!-- ============ MISSABLES VIEW ============ -->
-  <section id="view-missables" class="view" hidden>
-    <div class="view-head">
-      <h2>Missables — do not leave these behind</h2>
-      <p>Every trophy this guide flags as missable, with the window in which it can be earned and how it can be lost. “Missable” here is reasoned from the official descriptions: stranger strands that depend on a living, available giver; a unique one-off hunt; scripted encounters; and counters fed by finite choices. Everything not listed here can be cleaned up in free roam after the story.</p>
-    </div>
-    <ul id="missable-list" class="cards miss-cards"></ul>
-  </section>
-</main>
+    <main>
+      <!-- ============ GUIDE VIEW ============ -->
+      <section id="view-guide" class="view">
+        <div class="controls" role="region" aria-label="Filters">
+          <label class="ctl grow">Search
+            <input id="f-search" type="search" placeholder="Search name or description…" autocomplete="off">
+          </label>
+          <label class="ctl">Grade
+            <select id="f-grade">
+              <option value="all">All grades</option>
+              <option value="platinum">Platinum</option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="bronze">Bronze</option>
+            </select>
+          </label>
+          <label class="ctl">Type
+            <select id="f-kind">
+              <option value="all">All types</option>
+            </select>
+          </label>
+          <label class="ctl">Status
+            <select id="f-status">
+              <option value="all">Earned + unearned</option>
+              <option value="earned">Earned only</option>
+              <option value="unearned">Unearned only</option>
+            </select>
+          </label>
+          <label class="ctl">Missable
+            <select id="f-missable">
+              <option value="all">All</option>
+              <option value="yes">Missable only</option>
+              <option value="no">Not missable</option>
+            </select>
+          </label>
+          <label class="ctl">Hidden
+            <select id="f-hidden">
+              <option value="all">All</option>
+              <option value="yes">Hidden only</option>
+              <option value="no">Visible only</option>
+            </select>
+          </label>
+          <label class="ctl check">
+            <input id="f-spoiler" type="checkbox" checked>
+            <span>Spoiler protection<br><small>Blur hidden &amp; story trophies until earned</small></span>
+          </label>
+        </div>
 
-<footer>
-  <p><strong>Sources &amp; honesty note.</strong> Trophy names, descriptions and grades are the official PlayStation list for Grand Theft Auto VI (PS5), as listed by Exophase and PSNProfiles. All guide text on this page was written for this guide; PowerPyx, PlayStationTrophies.org and TrueTrophies are cited per-trophy as further reading and were never copied. Where the official description gives no locations or steps, the guide says so and offers general strategy instead of invented specifics. This app is fully offline: it fetches nothing, uses no external fonts, scripts or artwork, and stores your progress only in your browser.</p>
-  <p class="foot-small">Leonida Nights — an unofficial fan guide. Not affiliated with Rockstar Games or PlayStation.</p>
-</footer>
+        <p id="result-count" class="result-count" role="status"></p>
 
-<script type="module" src="app.js"></script>
-</body>
+        <div class="layout">
+          <div class="list-wrap">
+            <h2 id="list-heading" class="sr-only">Trophy list</h2>
+            <ul id="list" class="cards"></ul>
+            <p id="empty" class="empty" hidden>No trophies match these filters. Loosen a filter or clear the search.</p>
+          </div>
+
+          <aside id="detail" class="detail" aria-label="Trophy detail" aria-live="polite">
+            <p class="detail-hint">Select a trophy to read its full guide — official description, strategy, missable window, tips and sources.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============ ROADMAP VIEW ============ -->
+      <section id="view-roadmap" class="view" hidden>
+        <div class="view-head">
+          <h2>Road to Platinum</h2>
+          <p>Five phases, ordered from the official trophy descriptions. Story first (with missable warnings in mission order), then strands and the finale, then the open-world sweep, then crime, combat and money, and finally cleanup to 100%. Estimated total: <strong>60–100 hours</strong>, dominated by 100% completion and the big counters (250 stunts, 500 choices, $250,000 laundered). No difficulty trophy exists in the official list, and nothing in the list requires online play — every trophy is a single-player activity.</p>
+          <p class="ponr">⚠ Point of no return: before starting the final mission, clear every open stranger strand and attempt the VCIA departure trophy. The finale is the last guaranteed story window.</p>
+          <button type="button" class="print-btn" onclick="window.print()">Print this roadmap</button>
+        </div>
+        <div id="roadmap"></div>
+      </section>
+
+      <!-- ============ MISSABLES VIEW ============ -->
+      <section id="view-missables" class="view" hidden>
+        <div class="view-head">
+          <h2>Missables — do not leave these behind</h2>
+          <p>Every trophy this guide flags as missable, with the window in which it can be earned and how it can be lost. “Missable” here is reasoned from the official descriptions: stranger strands that depend on a living, available giver; a unique one-off hunt; scripted encounters; and counters fed by finite choices. Everything not listed here can be cleaned up in free roam after the story.</p>
+        </div>
+        <ul id="missable-list" class="cards miss-cards"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>Sources &amp; honesty note.</strong> Trophy names, descriptions and grades are the official PlayStation list for Grand Theft Auto VI (PS5), as listed by Exophase and PSNProfiles. All guide text on this page was written for this guide; PowerPyx, PlayStationTrophies.org and TrueTrophies are cited per-trophy as further reading and were never copied. Where the official description gives no locations or steps, the guide says so and offers general strategy instead of invented specifics. This app is fully offline: it fetches nothing, uses no external fonts, scripts or artwork, and stores your progress only in your browser.</p>
+      <p class="foot-small">Leonida Nights — an unofficial fan guide. Not affiliated with Rockstar Games or PlayStation.</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
 </html>

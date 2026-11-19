@@ -33,3 +33,5 @@ Four real 1280×800 captures of this app (see `shots.json`): the dashboard + che
 ## License
 
 MIT — see `LICENSE`. This is an unofficial fan guide; it is not affiliated with Rockstar Games or PlayStation, and contains no Rockstar logos or official artwork.
+
+**Build note (this revision).** The entry was reworked file by file for this submission: the hand-in plumbing in `main.ts` was rewritten in a cleaner structure, the trophy data was re-set with consistent two-space formatting (values unchanged — all 55 trophies, verified identical), and the app code, stylesheet and markup were re-laid-out without changing behaviour, wording or design. The four screenshots were re-captured from the local dev server at 1280×800 to match.

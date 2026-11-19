@@ -1,1 +1,38 @@
-[{"file":"1-dashboard-guide.jpg","path":"/?demo=1&detail=40","view":"Guide & Tracker: dashboard header (11% demo progress, per-grade bars, trophy points), full checklist, and the detail panel open on Maximum Withdrawal showing the official description and full guide","viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","path":"/?demo=1&view=roadmap","view":"Road to Platinum roadmap: five ordered phases with effort estimates, point-of-no-return and missable warnings, and per-phase trophy chips with earned state","viewport":{"height":800,"width":1280}},{"file":"3-missables.jpg","path":"/?demo=1&view=missables","view":"Missables view: every missable trophy as a card with its earning window chip, earned toggles and progress counters","viewport":{"height":800,"width":1280}},{"file":"4-spoiler-filters.jpg","path":"/?demo=1&hidden=yes&detail=48","view":"Checklist filtered to Hidden only with spoiler protection visibly blurring the hidden trophy names and descriptions; detail panel shows the spoiler-protected state, missable note and the 212/500 choices counter","viewport":{"height":800,"width":1280}}]
+[
+  {
+    "file": "1-dashboard-guide.jpg",
+    "path": "/?demo=1&detail=40",
+    "view": "Guide & Tracker: dashboard header (11% demo progress, per-grade bars, trophy points), full checklist, and the detail panel open on Maximum Withdrawal showing the official description and full guide",
+    "viewport": {
+      "height": 800,
+      "width": 1280
+    }
+  },
+  {
+    "file": "2-roadmap.jpg",
+    "path": "/?demo=1&view=roadmap",
+    "view": "Road to Platinum roadmap: five ordered phases with effort estimates, point-of-no-return and missable warnings, and per-phase trophy chips with earned state",
+    "viewport": {
+      "height": 800,
+      "width": 1280
+    }
+  },
+  {
+    "file": "3-missables.jpg",
+    "path": "/?demo=1&view=missables",
+    "view": "Missables view: every missable trophy as a card with its earning window chip, earned toggles and progress counters",
+    "viewport": {
+      "height": 800,
+      "width": 1280
+    }
+  },
+  {
+    "file": "4-spoiler-filters.jpg",
+    "path": "/?demo=1&hidden=yes&detail=48",
+    "view": "Checklist filtered to Hidden only with spoiler protection visibly blurring the hidden trophy names and descriptions; detail panel shows the spoiler-protected state, missable note and the 212/500 choices counter",
+    "viewport": {
+      "height": 800,
+      "width": 1280
+    }
+  }
+]
